@@ -4,8 +4,8 @@ public class LocationDTO {
     private String address;
     private double latitude;
     private double longitude;
-    private String total_lots;
-    private String lots_available;
+    private int total_lots;
+    private int lots_available;
 
     public String getAddress() {
         return address;
@@ -31,19 +31,21 @@ public class LocationDTO {
         this.longitude = longitude;
     }
 
-    public String getTotal_lots() {
+    public int getTotal_lots() {
         return total_lots;
     }
 
-    public void setTotal_lots(String total_lots) {
+    public void setTotal_lots(int total_lots) {
         this.total_lots = total_lots;
     }
 
-    public String getLots_available() {
+    public int getLots_available() {
         return lots_available;
     }
 
-    public void setLots_available(String lots_available) {
+    public void setLots_available(int lots_available) {
         this.lots_available = lots_available;
     }
+
+    
 }

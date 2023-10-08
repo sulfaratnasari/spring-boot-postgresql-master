@@ -24,9 +24,9 @@ public class Carpark extends AuditModel {
     @Column(name="carpark_location_id")
     private Long carparkLocationID;
 
-     @Column(name="total_lots",columnDefinition = "text")
-    private String totalLots;
+     @Column(name="total_lots")
+    private int totalLots;
 
-    @Column(name="lots_available",columnDefinition = "text")
-    private String lotsAvailable;
+    @Column(name="lots_available")
+    private int lotsAvailable;
 }

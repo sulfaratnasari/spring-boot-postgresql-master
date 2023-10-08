@@ -52,8 +52,8 @@ public class CarparkController {
 
         for (CarparkAvailability carparkdata : carparkData) {
             String carparkNumber = carparkdata.getCarpark_number();
-            String lotsAvailable = carparkdata.getCarpark_info().get(0).getLots_available();
-            String totalLots = carparkdata.getCarpark_info().get(0).getTotal_lots();
+            int lotsAvailable = Integer.parseInt(carparkdata.getCarpark_info().get(0).getLots_available());
+            int totalLots = Integer.parseInt(carparkdata.getCarpark_info().get(0).getTotal_lots());
 
             Long locationId = locationIdMap.get(carparkNumber);
 
@@ -118,8 +118,8 @@ public class CarparkController {
             location.setAddress(obj[0].toString());
             location.setLatitude(Double.parseDouble(obj[1].toString()));
             location.setLongitude(Double.parseDouble(obj[2].toString()));
-            location.setTotal_lots(obj[3].toString());
-            location.setLots_available(obj[4].toString());
+            location.setTotal_lots(Integer.parseInt(obj[3].toString()));
+            location.setLots_available(Integer.parseInt(obj[4].toString()));
             locations.add(location);
         }
         return locations;
